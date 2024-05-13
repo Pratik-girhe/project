@@ -1,0 +1,135 @@
+<% layout("/layouts/boilerplate") %>
+<body>
+    <style>
+        /* Custom styling */
+#about-us, #contact-us, #additional {
+  display: none;
+}
+
+/* Bootstrap overrides */
+.container {
+  padding-top: 30px;
+  margin-bottom: 20px;
+
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+h2 {
+  margin-top: 30px;
+}
+
+.card {
+  margin-bottom: 30px;
+  height: 100%;
+}
+
+.card-body {
+  padding: 20px;
+  
+}
+
+.card-title {
+  margin-bottom: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.card-text {
+  margin-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+button {
+  margin-top: auto;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+h2{
+    color: #007bff;
+}
+
+button{
+    background-color: #007bff;
+    color: white;
+}
+body{
+    background-color: #f0f8ff;
+}
+h1{
+    font-weight: bold;
+    color:#007bff
+}
+.hi{
+    margin-left: 15px;
+}
+    </style>
+
+
+<div class="hi">
+    <h1>Welcome to the Wanderlust!</h1>
+    <p style="font-weight: bold;">Welcome to our website! We're thrilled to extend a warm invitation to explore our platform tailored for travelers like you.</p>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+          <h2 class="card-title">About Us</h2>
+          <p class="card-text">Explore unique places to stay and experiences all around the world. Whether you're looking for a cozy cabin in the woods or a luxury villa by the beach, our website offers a wide range of accommodations to suit every traveler's needs. Our mission is to connect travelers with unforgettable experiences and provide hosts with a platform to share their spaces and stories. From city apartments to countryside retreats, we believe that every trip should be an adventure.</p>
+          <button onclick="showAbout()" >Read More</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+          <h2 class="card-title">Contact Us</h2>
+          <p class="card-text">Name : Pratik Girhe</p>
+          <p class="card-text">Email: wanderlust@gmail.com</p>
+          <p class="card-text">Phone: 9370363046</p>
+          <p class="card-text">For any questions or assistance, please feel free to reach out to us using the form below or through the contact details provided.</p>
+          <button onclick="showContact()" style="margin-top: 25px;">Contact Us</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+          <h2 class="card-title">Register Now</h2>
+          <p class="card-text">Looking to showcase your hotels or villas to a global audience of travelers? Look no further! You can easily register your properties with us and add your listings to our platform. Join our community of hospitality partners and unlock the potential to reach a vast network of discerning travelers seeking unique and memorable accommodations</p>
+          <button onclick="showAdditional()" style="margin-top: 30px;">Explore</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+    function showAbout() {
+  document.getElementById("homepage-content").style.display = "none";
+  document.getElementById("about-us").style.display = "block";
+  document.getElementById("contact-us").style.display = "none";
+  document.getElementById("additional").style.display = "none";
+}
+
+function showContact() {
+  document.getElementById("homepage-content").style.display = "none";
+  document.getElementById("about-us").style.display = "none";
+  document.getElementById("contact-us").style.display = "block";
+  document.getElementById("additional").style.display = "none";
+}
+
+function showAdditional() {
+  document.getElementById("homepage-content").style.display = "none";
+  document.getElementById("about-us").style.display = "none";
+  document.getElementById("contact-us").style.display = "none";
+  document.getElementById("additional").style.display = "listing";
+}
+
+</script>
+</body>
